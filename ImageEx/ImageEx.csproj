@@ -1,19 +1,20 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras">
 
 	<PropertyGroup>
-		<TargetFrameworks>uap10.0.19041;net6.0-windows10.0.19041;net7.0-windows10.0.19041</TargetFrameworks>
+		<TargetFrameworks>uap10.0.19041;net6.0-windows10.0.19041;net7.0-windows10.0.19041;net8.0-windows10.0.19041</TargetFrameworks>
 		<TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
 		<OutputType>Library</OutputType>
 		<GenerateAssemblyInfo>False</GenerateAssemblyInfo>
 		<LangVersion>11.0</LangVersion>
 		<NoWarn>NETSDK1023;CA1416</NoWarn>
-		<AssemblyVersion>2.0.0</AssemblyVersion>
-		<FileVersion>$(AssemblyVersion)</FileVersion>
-		<VersionPrefix>$(AssemblyVersion)</VersionPrefix>
 		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
 		<DebugType>embedded</DebugType>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="$(TargetFramework.Contains('net8.0'))">
+		<RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+	</PropertyGroup>
+	
 	<ItemGroup Condition="$(TargetFramework.Contains('windows'))">
 		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" />
 	</ItemGroup>
