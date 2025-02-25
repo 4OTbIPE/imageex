@@ -1,3 +1,5 @@
+[UWP Nuget Package](https://www.nuget.org/packages/ImageEx.UWP) / [WinUI Nuget Package](https://www.nuget.org/packages/ImageEx.WinUI)
+
 # ImageEx - Extended Image Control for UWP and WinUI apps
 The ImageEx control extends the standard image platform control, improving the performance and responsiveness of your applications.
 The source images are loaded asynchronously, and a loading indicator is displayed during execution.
@@ -11,7 +13,7 @@ https://github.com/CommunityToolkit/WindowsCommunityToolkit
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL FOURSOFT BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Nuget Packages:
-- For **Legacy UWP** (.NET Native) use https://www.nuget.org/packages/ImageEx.UWP - version 3.9
-- For **Modern UWP** (.NET 9+) use https://www.nuget.org/packages/ImageEx.UWP - version 4.0 *or later*
-- For **WinUI3** apps use https://www.nuget.org/packages/ImageEx.WinUI - version 4.0 *or later*
-- Old package (https://www.nuget.org/packages/ImageEx) is no longer supported
+- For **Legacy UWP** (.NET Native) use [ImageEx.UWP](https://www.nuget.org/packages/ImageEx.UWP) - version 3.9
+- For **Modern UWP** (.NET 9+) use [ImageEx.UWP](https://www.nuget.org/packages/ImageEx.UWP) - version 4.0 *or later*
+- For **WinUI3** apps use [ImageEx.WinUI](https://www.nuget.org/packages/ImageEx.WinUI) - version 4.0 *or later*
+- Old package ([ImageEx](https://www.nuget.org/packages/ImageEx)) is no longer supported
