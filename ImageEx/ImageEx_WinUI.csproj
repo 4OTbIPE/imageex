@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0-windows10.0.22621</TargetFramework>
+		<OutputType>Library</OutputType>
+		<UseWinUI>true</UseWinUI>
+		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+		<RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+		<IsAotCompatible>true</IsAotCompatible>
+		<DebugType>embedded</DebugType>
+		<DefineConstants>WINUI3</DefineConstants>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" />
+	</ItemGroup>
+
+</Project>

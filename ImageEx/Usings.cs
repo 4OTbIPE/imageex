@@ -10,7 +10,7 @@ global using System.IO;
 global using System.Threading;
 global using System.Threading.Tasks;
 
-#if WINDOWS_UWP || NETSTANDARD2_0
+#if WIN_UWP
 global using Windows.UI.Composition;
 global using Windows.UI.Xaml;
 global using Windows.UI.Xaml.Controls;
@@ -18,7 +18,7 @@ global using Windows.UI.Xaml.Media;
 global using Windows.UI.Xaml.Media.Imaging;
 #endif
 
-#if NETCOREAPP
+#if WINUI3
 global using Microsoft.UI.Composition;
 global using Microsoft.UI.Xaml;
 global using Microsoft.UI.Xaml.Controls;
