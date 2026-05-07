@@ -37,6 +37,14 @@ public static class Extensions
 [TemplatePart(Name = PartImage, Type = typeof(object))]
 public abstract partial class ImageExBase : Control
 {
+    // Added a static default image to work around a bug when publishing an app in NativeAOT
+    // the Image control was cut off by the trimmer and image is not displaying in control, if your app
+    // is not creating any other Image class object.
+    //
+    // In ApplyTemplate()
+    // in row [Image = GetTemplateChild(PartImage) as object;] [Image] variable will always be FrameworkElement, not Image.
+    private static readonly Image img = new();
+
     private bool _isInViewport;
 
     /// <summary>
