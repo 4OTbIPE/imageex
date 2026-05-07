@@ -1,18 +1,33 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net8.0-windows10.0.22621</TargetFramework>
+		<TargetFrameworks>net8.0-windows10.0.17763.0;net10.0-windows10.0.17763.0;net8.0-windows10.0.26100.0;net10.0-windows10.0.26100.0</TargetFrameworks>
 		<OutputType>Library</OutputType>
 		<UseWinUI>true</UseWinUI>
-		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-		<RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
-		<IsAotCompatible>true</IsAotCompatible>
-		<DebugType>embedded</DebugType>
 		<DefineConstants>WINUI3</DefineConstants>
+		<DisableRuntimeMarshalling>true</DisableRuntimeMarshalling>
 	</PropertyGroup>
+
+	<PropertyGroup>
+		<PackageId>ImageEx.WinUI</PackageId>
+		<PackageReleaseNotes>
+			Version 5.0
+				- Migrate to only WinUI package (instead of full Windows App SDK package)
+				- .NET 10.0 TFM
+				- Lowered Windows SDK version for more compatibility
+				- Updated package structure (without xbf files)
+		</PackageReleaseNotes>
+		<PackageIcon>WinUILogo.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\WinUILogo.png" Pack="true" PackagePath="\" />
+		<None Include="..\README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
 	
 	<ItemGroup>
-		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" />
+		<PackageReference Include="Microsoft.WindowsAppSDK.WinUI" Version="1.8.250906003" />
 	</ItemGroup>
 
 </Project>

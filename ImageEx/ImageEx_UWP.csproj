@@ -1,14 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net9.0-windows10.0.26100</TargetFrameworks>
+		<TargetFrameworks>net9.0-windows10.0.26100.0;net10.0-windows10.0.26100.0</TargetFrameworks>
 		<OutputType>Library</OutputType>
-		<RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
 		<UseUwp>true</UseUwp>
-		<IsAotCompatible>true</IsAotCompatible>
 		<DisableRuntimeMarshalling>true</DisableRuntimeMarshalling>
-		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<DefineConstants>WIN_UWP</DefineConstants>
 	</PropertyGroup>
+	
+	<PropertyGroup>
+		<PackageId>ImageEx.UWP</PackageId>
+		<PackageReleaseNotes>
+			Version 5.0
+			- .NET 10.0 TFM
+			- Updated package structure (without xbf files)
+		</PackageReleaseNotes>
+		<PackageIcon>UWPLogo.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
 
+	<ItemGroup>
+		<None Include="..\UWPLogo.png" Pack="true" PackagePath="\" />
+		<None Include="..\README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+	
 </Project>
